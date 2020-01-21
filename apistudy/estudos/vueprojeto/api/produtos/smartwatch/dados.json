@@ -1,0 +1,20 @@
+{
+  "id": "smartwatch",
+  "nome": "Smartwatch",
+  "preco": 874,
+  "descricao": "Fique chateado porque Camembert este vinho ainda é muito bom de qualquer maneira explodir qualquer camembert sem ônibus.",
+  "estoque": 17,
+  "img": "./api/produtos/smartwatch/smartwatch.jpg",
+  "avaliacoes": [
+    {
+      "nome": "Marcelo",
+      "estrelas": 5,
+      "descricao": "Gostei muito do produto"
+    },
+    {
+      "nome": "Carolina",
+      "estrelas": 4,
+      "descricao": "Gostei muito do produto mas poderia ser mais barato"
+    }
+  ]
+}

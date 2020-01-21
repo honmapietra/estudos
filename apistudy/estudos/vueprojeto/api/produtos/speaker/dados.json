@@ -1,0 +1,20 @@
+{
+  "id": "speaker",
+  "nome": "Speaker",
+  "preco": 774,
+  "descricao": "Fique chateado porque Camembert este vinho ainda é muito bom de qualquer maneira explodir qualquer camembert sem ônibus.",
+  "estoque": 10,
+  "img": "./api/produtos/speaker/speaker.jpg",
+  "avaliacoes": [
+    {
+      "nome": "Marcelo",
+      "estrelas": 5,
+      "descricao": "Gostei muito do produto"
+    },
+    {
+      "nome": "Carolina",
+      "estrelas": 4,
+      "descricao": "Gostei muito do produto mas poderia ser mais barato"
+    }
+  ]
+}
