@@ -1,33 +1,38 @@
-const URL = 'https://pokeapi.co/api/v2/';
-const form = document.querySelector("form");
-const input = document.querySelector("input");
+const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
 
+function fetchPokemon(apiURL) {
+  return fetch(apiURL).then(response => response.json());
+}
 
-function populate
-(apiURL) {
-  fetch(apiURL).then(response => response.json())
-  .then(data => format(data))
+const changeSrcImage = (src, imageElement) => {
+    imageElement.src = src;
+}
 
-
-const format = (data) => {
-
+const populatePokemonData = (data) => {
     const imageDiv = document.getElementById('image');
 
-    image.innerHTML = `<img src=${data.sprites.front_default}>`;
+    changeSrcImage(data.sprites.front_default, imageDiv);
 
     document.querySelector('#pokemon-name').innerText = `${(data.name).replace('-', ' ')}`;
     document.getElementById("type").innerText = `${data.types[0].type.name}`;
     document.getElementById("height").innerText = `${Math.round(data.height / 3)}'`;
     document.getElementById("order").innerText  = `${data.order}`;
 }
+
+async function search() {
+    const input = document.querySelector("input");
+    const name = input.value.toLowerCase().trim().replace('.', '').replace('-', '');
+    
+    const apiURL = `${BASE_URL}/${name}`;
+
+    try {
+        const pokemonData = await fetchPokemon(apiURL);
+        populatePokemonData(pokemonData);
+    } catch (error) {
+        alert("Oops, pokemon not found please correct the name")   
+    }   
 }
 
-function search(e) {
-   e.preventDefault();
-    var name = 
-
-    input.value.toLowerCase().trim().replace('.', '').replace(' ', '-');
-    
-     apiURL = `${url}${category}/${name}`;
-           
+function handleButtonClick() {
+    search();
 }

@@ -24,7 +24,6 @@ p {
 .card {
     background: linear-gradient(180deg, rgb(206, 66, 124) 0%, rgb(132, 140, 185) 65%);
     width: 330px;
-    height: 450px;
     margin: 20px auto;
     border-radius: 10px;
     display: flex;
@@ -32,7 +31,6 @@ p {
     flex-direction: column;
     overflow-x: hidden;
 }
-
 
 
 .image {
