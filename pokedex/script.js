@@ -19,9 +19,8 @@ const populatePokemonData = (data) => {
     document.getElementById("order").innerText  = `${data.order}`;
 }
 
-async function search() {
-    const input = document.querySelector("input");
-    const name = input.value.toLowerCase().trim().replace('.', '').replace('-', '');
+async function search(pokemonName) {
+    const name = pokemonName.toLowerCase().trim().replace('.', '').replace('-', '');
     
     const apiURL = `${BASE_URL}/${name}`;
 
@@ -33,6 +32,14 @@ async function search() {
     }   
 }
 
-function handleButtonClick() {
-    search();
+function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    const input = form.elements.pokemonName;
+
+    const pokemonName = input.value;
+
+    search(pokemonName);
 }

@@ -16,18 +16,19 @@
 <body>
   <div class="card">
     <h1 id="pokemon-name"> Pokemon</h1>
-    <input type="text">
-    <button onclick="handleButtonClick()" >Search</button>
+    <form onsubmit="handleFormSubmit(event)" >
+      <input type="text" name="pokemonName" >
+      <button type="submit" >
+        <img src="https://image.flaticon.com/icons/svg/483/483356.svg" />
+      </button>
+    </form >  
     <img id="image" />
     <div class="container">
-      <h1>Type:<div id="type"></div>
-      </h1>
-      <h1>Height<div id="height"></div>
-      </h1>
-      <h1>Order:<div id="order"></div>
-      </h1>
+      <h1>Type: <div class="pk-att" id="type"></div></h1>
+      <h1>Height: <div class="pk-att" id="height"></div></h1>
+      <h1>Order: <div class="pk-att" id="order"></div></h1>
     </div>
-    <p>Criator: Pietra | Pokemon API from: <a href="https://pokeapi.co/">PokeAPI</a> </p>
+    <p>Author: Pietra | Pokemon API from: <a href="https://pokeapi.co/">PokeAPI</a> </p>
   </div>
 </body>
 
